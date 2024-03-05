@@ -1,0 +1,13 @@
+.header-container > nav> ul{
+    padding-right: 16px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2rem;
+    height: 100px;
+}
+
+.header-container > nav> ul>li{
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.tech-container{
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-container > hr{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    
+}
+
+.tech-container > h2{
+    padding-top: 20px;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.skills-cards{
+    max-width: 1000px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.modal{
+    background-color: red;
+    width: 400px;
+    height: 400px;
+}
