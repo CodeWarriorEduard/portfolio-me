@@ -1,63 +1,50 @@
-import React, { useEffect } from 'react'
-import './TechStyle.css'
+import React, { useEffect } from 'react';
+import './TechStyle.css';
 import Card from '../CardSkills/Card';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function Tech() {
+// Importa las imágenes utilizando rutas relativas
+import javaLogo from '../../assets/javalogo.png';
+import javascriptLogo from '../../assets/javascript.png';
+import htmlLogo from '../../assets/html.png';
+import cssLogo from '../../assets/css.png';
+import reactLogo from '../../assets/react.png';
+import springLogo from '../../assets/spring.png';
+import nodejsLogo from '../../assets/nodejs.png';
 
+function Tech() {
   useEffect(() => {
     AOS.init({
-        offset: 200,
-        duration: 600,
-        easing: 'ease-in-sine',
-        delay: 100,
-      });
-  }, [])
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  }, []);
 
-    const technologies = [
-        {
-          name: "Java",
-          image: "src/assets/javalogo.png"
-        },
-        {
-          name: "JavaScript",
-          image: "src/assets/javascript.png"
-        },
-        {
-          name: "HTML",
-          image: "src/assets/html.png"
-        },
-        {
-          name: "CSS",
-          image: "src/assets/css.png"
-        },
-        {
-          name: "React",
-          image: "src/assets/react.png"
-        },
-        {
-          name: "Spring Boot",
-          image: "src/assets/spring.png"
-        },
-        {
-          name: "Node.js",
-          image: "src/assets/nodejs.png"
-        }
-      ];
+  const technologies = [
+    { name: "Java", image: javaLogo },
+    { name: "JavaScript", image: javascriptLogo },
+    { name: "HTML", image: htmlLogo },
+    { name: "CSS", image: cssLogo },
+    { name: "React", image: reactLogo },
+    { name: "Spring Boot", image: springLogo },
+    { name: "Node.js", image: nodejsLogo }
+  ];
       
   return (
     <div className='tech-container'>
-        <h2 data-aos="fade-up">SKILLS</h2>
-       <div className="skills-cards">
+      <h2 data-aos="fade-up">SKILLS</h2>
+      <div className="skills-cards">
         {
-            technologies.map((tech, index) => {
-                return <Card key={index} name={tech.name} image={tech.image} />;
-            })
+          technologies.map((tech, index) => {
+            return <Card key={index} name={tech.name} image={tech.image} />;
+          })
         }
-       </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Tech
+export default Tech;
